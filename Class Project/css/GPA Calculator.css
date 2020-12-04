@@ -1,0 +1,109 @@
+html{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+body header {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding-bottom:25px;
+    position: sticky;
+    top:20px;
+    
+}
+
+.Account>a{
+    text-decoration: none;
+    margin-left: 20px;
+    color: gray;
+    font-size: 10px;
+    
+}
+
+.Account>a:hover{
+    color: lightgray;
+}
+.Account{
+    text-align: right;
+    margin-right: 10px;
+    margin-bottom: 15px;
+}
+button.search-submit {
+    background: black;
+    color: black;
+    margin-top: 4px;
+    margin-right: 10px;
+    padding:0;
+    position: relative;  
+}
+.nav>a{
+    font-weight: 700;
+    color: white; 
+    text-decoration: none;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.nav>a:hover {
+    color: orange;
+}
+.nav{
+    padding-bottom: 10px;
+    padding-top: 10px;
+
+}
+
+.details {
+    text-align: right;
+    margin-bottom: 8px;
+    
+}
+
+a{
+    text-decoration: none;
+}
+#Tname{
+    color: coral;
+    text-align: center;
+}
+.one{
+    margin: 0 auto;
+    width: 1000px;
+}
+.btns {
+    margin-bottom: 5px;
+}
+.btn {
+    display: inline-block;
+    padding: .3em 1.2em;
+    border-radius: 3px;
+    background-color: black;
+    color: white;
+    cursor :pointer;
+}
+.btn:hover{
+    color: orange;
+    -webkit-transform:scale(1.2);
+}
+table.table {
+    box-sizing: border-box;
+    width: 100%;
+    border-collapse: collapse;
+}
+table.table td ,
+table.table th {
+    border: 1px solid #ccc;
+    line-height: 2em;
+    text-align: center;
+}
+
+input {
+    border: None;
+}
+.none {
+    display: none;
+}
