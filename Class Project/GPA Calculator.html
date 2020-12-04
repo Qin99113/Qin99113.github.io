@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <Title>GPA Calculator</Title>
+        <link rel="stylesheet" href="/css/GPA%20Calculator.css">
+        <link rel="shortcut icon" href="images/liferay.ico">
+    </head>
+    <body>
+        <header>
+            <div class="logo"><img src="images/timg.jpg" width="115px" height="115px"></div>
+            <div class="search">
+                <div class="Account"><a href="Teaching%20Assistant.html">Log In</a><a href="Teaching%20Assistant.html">My Account</a></div>
+                <div class="details">
+                    <input type="text" placeholder="Search">
+                    <button type="submit" class="search-submit">
+                        <span class="screen-reader-image"><img src="images/search.jpg" width="20px"></span>   
+                    </button>
+    
+                </div>
+                <nav class="nav">
+                    <a href="Homepage.html">HOME</a>
+                    <a href="Computer.html">Computer science</a>
+                    <a href="Teaching%20Assistant.html">Teaching Assistant</a>
+                    <a href="GPA%20Calculator.html">GPA calculate</a>
+                </nav>
+            </div> 
+        </header>
+        <hr>
+        <h1 id="Tname">GPA Calculator</h1>
+        <div class="one">
+            <div class="btns">
+                <div class="btn" id="btn_add">Add</div>
+            </div>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th width="80px">Number</th>
+                    <th width="100px">Course</th>
+                    <th width="220px">Letter Grade</th>
+                    <th width="80px">Credit Hours</th>
+
+                    <th width="100px">Operation</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="none" >
+                    <td><input type="checkbox"></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>
+                        <a class="btn_del" href="javascript:void(0)">Delete</a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <br>
+            <div class="btn" id="calculate" >Calculate</div>
+        </div>
+        <script>
+            //获取Id为btn_add的元素，并将其赋值给btn_add
+            var btn_add = document.getElementById("btn_add");
+
+            //获取标签名字为tbody的第一个标签，并将其赋值给tbody
+            var tbody = document.getElementsByTagName("tbody")[0];
+
+            //计算按钮
+            var calculate=document.getElementById("calculate");
+
+            // 为删除按钮绑定事件处理函数
+            tbody.onclick = function(event){
+                //新建触发事件=触发事件的Dom元素本身（触发事件即点击事件）
+                var target = event.target;
+                //如果触发事件的节点名字===a（如果点击a标签）
+                if(target.nodeName === "A"){
+
+                    //如果触发事件的class名字===btn_del（如果点击class名字===btn_del的a标签）
+                    if(target.className === "btn_del"){
+                        //移除tody下的孩子（删除点击事件的父节点的父节点，即删除点击的a标签的父节点（td标签)的父节点（tr标签）
+                        tbody.removeChild(target.parentNode.parentNode)
+                    }
+                    //如果触发事件的class名字===btn_upd（如果点击class名字===btn_upd的a标签）
+                    if(target.className === "btn_upd"){
+                        alert("Modify");
+                    }
+                }
+                items-=1
+            }
+
+            // 为添加按钮绑定事件处理函数
+            btn_add.onclick = function(event){
+
+                // 产生一个tr，新添加行等于复制隐藏行
+                var newTr = tbody.firstElementChild.cloneNode(true);
+
+                //新添加行的第2+1列的值为0-1之间的随机小数
+                newTr.children[1].innerHTML = "<input type='text' name='course'>";
+                newTr.children[2].innerHTML = "<select>" +
+                                                "<option>A</option>"+
+                                                "<option>B</option>"+
+                                                "<option>C</option>"+
+                                                "<option>D</option>"+
+                                                "<option>F</option>"+
+                                             "</select>";
+                newTr.children[3].innerHTML = "<input type='text' name='hour'>";
+                //新添加行的class名字为0-1之间的随机小数，使其与复制的行不同，避免首CSS影响被隐藏
+                newTr.className = Math.random();
+
+                // 将一个tr追加到tbody
+                tbody.appendChild(newTr);
+            };
+
+            // 为计算按钮绑定事件处理函数
+            calculate.onclick = function(event){
+                var dict={
+                    "A":4.0,
+                    "B":3.0,
+                    "C":2.0,
+                    "D":1.0,
+                    "F":0
+                }
+                var scores=document.getElementsByTagName("select")
+                var hours=document.getElementsByName("hour")
+                var total_score=0
+                var total_credit=0
+
+                for (var i=0;i<scores.length;i++)
+                {
+                    var temp=0
+                    temp=parseFloat(hours[i].value)
+                    total_credit+=temp
+                    total_score+=(parseFloat(dict[scores[i].value])*temp)
+                }
+                var gpa=total_score/total_credit
+                alert("Your GPA is :"+ gpa)
+
+            };
+        </script>
+        </body>
+</html>
