@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <Title>Computer Science</Title>
+        <link rel="stylesheet" href="./css/Homepage.css">
+        <link rel="shortcut icon" href="images/liferay.ico">
+        <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+        <script> 
+        $(document).ready(function(){
+          $("#background").click(function(){
+            $("#Details1").slideToggle("slow");
+          });
+        });
+        </script>
+    </head>
+    <body>
+        <header>
+            <div class="logo"><img src="images/timg.jpg" width="115px" height="115px"></div>
+            <div class="search">
+                <div class="Account"><a href="Teaching%20Assistant.html">Log In</a><a href="Teaching%20Assistant.html">My Account</a></div>
+                <div class="details">
+                    <input type="text" placeholder="Search">
+                    <button type="submit" class="search-submit">
+                        <span class="screen-reader-image"><img src="images/search.jpg" width="20px"></span>   
+                    </button>
+    
+                </div>
+                <nav class="nav">
+                    <a href="Homepage.html">HOME</a>
+                    <a href="Computer.html">Computer science</a>
+                    <a href="Teaching%20Assistant.html">Teaching Assistant</a>
+                    <a href="GPA%20Calculator.html">GPA calculate</a>
+                </nav>
+            </div> 
+        </header>
+        <hr>
+        <div class="Content">
+            <div class="background" id="background">
+                <div class="Introduction">
+                    <a href="Computer.html" id="cs"><h1 class="center">Computer Science Department</h1></a>
+                    <p class="center">The Department of Computer Science is a place that brings motivated students, professors, and professionals together.  We train high-quality students to become problem solvers.  Our majors are active and engaged in campus life.  Students clubs such as Computer Science Club and Engineering Club are among the most active on campus.  This allows us to provide exceptional future prospects to all those who study with us or collaborate with us.</p>
+                </div>
+            </div>
+            <div id=Details1>
+                <center>
+                <h3>10 Main Directions of CS</h3>
+                <table id="classification">
+                    <tr>
+                        <th rowspan="3">Theoretical CS</th>
+                        <td>Computer Theory</td>
+                    </tr>
+                    <tr>
+                        <td>Agorithm and Data Structure</td>
+                    </tr>
+                    <tr>
+                        <td>Programming Language</td>
+                    </tr>
+
+                    <tr>
+                        <th rowspan="8">Applied CS</th>
+                        <td>Artifical Intelligence</td>
+                    </tr>
+                    <tr>
+                        <td>Computer Architecture</td>
+                    </tr>
+                    <tr>
+                        <td>Computer Graphics and Visualization</td>
+                    </tr>
+                    <tr>
+                        <td>Computer Security and Cryptography</td>
+                    </tr>
+                    <tr>
+                        <td>Computer Systems and Networks</td>
+                    </tr>
+                    <tr>
+                        <td>Database</td>
+                    </tr>
+                    <tr>
+                        <td>Software Engineering</td>
+                    </tr>
+                    
+                </table>
+                </center>    
+            </div>
+
+            <div class="container">
+            <div class="News">
+                <h2 class="left">The latest News</h2>
+                <div class="left">
+                    <div id="left1">
+                        <h3 id="left1">Professors N Pajamas</h3>
+                        <img src="images/Professors-N-Pajamas-rotator.jpg" width="250px" height="300px">
+                        <p class="left">Join AUM Housing and Residence Life for their Professors N Pajamas on Dec. 2!  This Zoom event will take place from 8 p.m. - 11 p.m., and will feature a Live DJ, food, study help, and much more! Food pickup will begin at 8 in The Nest rec room. Join this event on ZOOM. </p>
+                    </div>    
+                    
+                    <div id="left2">
+                        <h3 id="left2">Thanks Giving Around the World</h3>
+                        <img src="images/Thanksgiving-Around-the-World.jpg" width="250px" height="300px">
+                        <p class="left">Students are encouraged to engage with their Housing Family as they prepare some of their favorite dishes live on Zoom. We’ll have lots of holiday favorites and new cultural cuisine. After the broadcast, students will be invited to grab some delicious food on Plum Place Lawn at 8pm. Zoom Link:<strong>https://auburn.zoom.us/j/99438321842</strong> </p>
+                    </div>
+                </div>
+            </div>
+                
+            <div class="Activities">
+                <h2 class="Activities">Student Activities</h2>
+                <ul class="Activities">
+                    <li><a href="">International Olympiad in Informatics</a></li>
+                    <li><a href="">Computer knowledge and skills competition</a></li>
+                    <li><a href="">Campus Activities Board:Free Health Screening</a></li>
+                    <li><a href="">Clubs and Organiaztions</a></li>
+                </ul>
+            </div>
+            </div>    
+        </div>
+        <footer class="footer">
+            <p> © 2020 Xiaoxuan Qin 464859643@qq.com. All Right Reserved. 联系我们</p>
+        </footer>
+    </body>
+</html>
