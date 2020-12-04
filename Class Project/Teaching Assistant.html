@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <Title>Teaching Assistant</Title>
+        <link rel="stylesheet" href="./css/Teaching%20Assistant.css">
+        <link rel="shortcut icon" href="images/liferay.ico">
+    </head>
+    <body>
+        <header>
+            <div class="logo"><img src="images/timg.jpg" width="115px" height="115px"></div>
+            <div class="search">
+                <div class="Account"><a href="Teaching%20Assistant.html">Log In</a><a href="Teaching%20Assistant.html">My Account</a></div>
+                <div class="details">
+                    <input type="text" placeholder="Search">
+                    <button type="submit" class="search-submit">
+                        <span class="screen-reader-image"><img src="images/search.jpg" width="20px"></span>   
+                    </button>
+    
+                </div>
+                <nav class="nav">
+                    <a href="Homepage.html">HOME</a>
+                    <a href="Computer.html">Computer science</a>
+                    <a href="Teaching%20Assistant.html">Teaching Assistant</a>
+                    <a href="GPA%20Calculator.html">GPA calculate</a>
+                </nav>
+            </div> 
+        </header>
+        <hr>
+        
+        <form name="myform" action="student_data.html" method="get">
+            <h1 id="TA">Teaching Assistant Application</h1>
+	
+            <h2>Student's name</h2>
+            <label for="firstname">First name:</label>
+            <input type="text" name="First name" id="firstname" required="required"><br>
+            <label for="lastname">Last name:</label>
+            <input type="text" name="Last name" id="lastname" required="required"><br>
+    
+            <h2>Basic information</h2>
+            <label for="Gender">Gender:</label>
+            <input type="radio" name="Gender" value="Male">Male
+            <input type="radio" name="Gender" value="Female">Female<br>
+            <label for="ID">ID:</label>
+            <input type="id" name="Student ID" id="id" placeholder="Eight Charactors" required="required"><br>
+            
+    
+            <h2>GPA</h2>
+            <label for="gpa">GPA:</label>
+            <input type="GPA" name="GPA" id="gpa" required="required"><br>
+            
+            <h2>Submission Date</h2>
+            <label for="date">Date:</label>
+            <input type="date" value="date" name="Date" id="date" required="required"><br>
+            
+    
+            <input type="submit" name="Button" id="button" value="Submit">
+            <input type="reset" name="Reset" id="reset">
+        </form>    
+        
+        <footer class="footer">
+            <p> © 2020 Xiaoxuan Qin 464859643@qq.com. All Right Reserved. 联系我们</p>
+        </footer>
+    </body>
+</html>
